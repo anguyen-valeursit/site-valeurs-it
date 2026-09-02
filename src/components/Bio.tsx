@@ -84,7 +84,7 @@ export default function Bio() {
         >
           <div className="aspect-[3/4] bg-gray-200 rounded-3xl overflow-hidden shadow-2xl relative z-10">
             <img
-              src="https://picsum.photos/seed/bio/800/1000"
+              src="/portrait-alain-nguyen.jpg"
               alt={SITE_CONTENT.bio.name}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

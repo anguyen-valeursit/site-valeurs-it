@@ -15,7 +15,7 @@ export default function History() {
         >
           <div className="aspect-square bg-gray-100 rounded-3xl overflow-hidden shadow-xl">
             <img
-              src="https://picsum.photos/seed/history/1000/1000"
+              src="/histoire-valeurs-it.jpg"
               alt="Histoire de Valeurs IT"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

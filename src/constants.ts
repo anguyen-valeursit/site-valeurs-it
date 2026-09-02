@@ -1,7 +1,7 @@
 export const SITE_CONTENT = {
   company: {
     name: "Valeurs IT",
-    logo: "https://lh3.googleusercontent.com/d/137JgXtta8VAVb6_UXJsgP0-sNRAVXxUD", // Logo Valeurs IT
+    logo: "/logo-valeurs-it.png", // Logo Valeurs IT — servi depuis public/
     tagline: "Conseiller. Transformer. Innover.",
     history: "Née de l’expérience unique des Jeux de Paris 2024, Valeurs IT accompagne les entreprises dans la transformation et la valorisation de leurs systèmes d’information. Notre conviction : la technologie n’a de sens que lorsqu’elle sert la vision, la performance collective et les valeurs humaines de l’organisation.",
     mission: "VALEURS IT s’appuie sur une expérience de terrain acquise au plus haut niveau d’exigence, nourrie par les principes d’authenticité, de rigueur et de collaboration. Notre mission : créer les conditions pour qu’une DSI devienne un levier de valeur au service de l’entreprise.",
@@ -14,7 +14,7 @@ export const SITE_CONTENT = {
   bio: {
     name: "Alain Nguyen",
     title: "Fondateur & Expert IT",
-    description: "Expert passionné par les enjeux de la transformation numérique, Alain Nguyen a fondé Valeurs IT pour apporter une vision humaine and stratégique à l'informatique d'entreprise. Fort d'une expérience solide dans le secteur, il accompagne ses clients avec une approche pragmatique et orientée résultats.",
+    description: "Expert passionné par les enjeux de la transformation numérique, Alain Nguyen a fondé Valeurs IT pour apporter une vision humaine et stratégique à l'informatique d'entreprise. Fort d'une expérience solide dans le secteur, il accompagne ses clients avec une approche pragmatique et orientée résultats.",
   },
   services: [
     {
@@ -50,7 +50,7 @@ export const SITE_CONTENT = {
       excerpt: "Partage d'expérience sur la vision stratégique, l'authenticité, les liens, l'exigence et la résilience, illustrant des moments inoubliables et inspirants.",
       date: "Octobre 2024",
       category: "Expérience",
-      image: "https://picsum.photos/seed/paris2024/800/600",
+      image: "/cover-paris-2024.jpg",
       link: "https://www.linkedin.com/pulse/les-jeux-de-paris-2024-une-exp%C3%A9rience-unique-viet-hung-alain-nguyen-volze"
     },
     {
@@ -59,7 +59,7 @@ export const SITE_CONTENT = {
       excerpt: "Analyse de la dépendance technologique et de l'importance de l'autonomie stratégique, avec 5 pistes concrètes pour reprendre le contrôle de son écosystème numérique.",
       date: "Janvier 2026",
       category: "Stratégie",
-      image: "https://picsum.photos/seed/sovereignty/800/600",
+      image: "/cover-souverainete-numerique.jpg",
       link: "https://www.linkedin.com/pulse/souverainet%C3%A9-num%C3%A9rique-pourquoi-il-est-temps-dagir-et-nguyen-qe5ce"
     },
     {
@@ -68,7 +68,7 @@ export const SITE_CONTENT = {
       excerpt: "Membre actif de la communauté Atout DSI, Alain Nguyen explore la posture de l'ITPreneur : un leadership stratégique, fédérateur et entrepreneurial pour maximiser l'impact du numérique.",
       date: "Mars 2026",
       category: "Communauté",
-      image: "https://picsum.photos/seed/itpreneur/800/600",
+      image: "/cover-it-preneur.jpg",
       link: "https://www.atout-dsi.com/ressources/trajectoire-itpreneur/"
     },
     {

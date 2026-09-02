@@ -51,7 +51,7 @@ export default function Hero() {
         >
           <div className="aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden shadow-2xl relative group">
             <img
-              src="https://picsum.photos/seed/tech/800/1000"
+              src="/hero-valeurs-it.jpg"
               alt="Valeurs IT"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               referrerPolicy="no-referrer"

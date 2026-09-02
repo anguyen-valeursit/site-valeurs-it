@@ -97,10 +97,10 @@ export default function ArticleView() {
           <footer className="mt-24 pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-4">
               <img 
-                src="https://lh3.googleusercontent.com/d/1WmWbbaGYDoO8x7iq-S-sh7XaWXhgtCXm" 
-                alt="Alain Nguyen" 
-                className="w-16 h-16 rounded-2xl object-cover grayscale hover:grayscale-0 transition-all"
-                referrerPolicy="no-referrer"
+                src="/photo-alain-nguyen.jpg"
+                alt="Alain Nguyen"
+                className="w-16 h-16 rounded-2xl object-cover"
+                onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "/logo-valeurs-it.png"; }}
               />
               <div>
                 <div className="font-bold text-primary">Alain Nguyen</div>
