@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "Contact": {
+      "title": "Contact",
+      "description": "Messages de contact envoyés par les utilisateurs",
+      "type": "object",
+      "properties": {
+        "firstName": { "type": "string", "description": "Prénom de l'expéditeur" },
+        "lastName": { "type": "string", "description": "Nom de l'expéditeur" },
+        "email": { "type": "string", "format": "email", "description": "Email de l'expéditeur" },
+        "message": { "type": "string", "description": "Contenu du message" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Date d'envoi" }
+      },
+      "required": ["firstName", "lastName", "email", "message", "createdAt"]
+    },
+    "Download": {
+      "title": "Download",
+      "description": "Informations des utilisateurs ayant téléchargé le témoignage",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Nom complet" },
+        "email": { "type": "string", "format": "email", "description": "Email professionnel" },
+        "company": { "type": "string", "description": "Nom de la société" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Date du téléchargement" }
+      },
+      "required": ["name", "email", "company", "createdAt"]
+    },
+    "News": {
+      "title": "News",
+      "description": "Articles d'actualités et chroniques IT",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "Titre de l'article" },
+        "excerpt": { "type": "string", "description": "Résumé de l'article" },
+        "content": { "type": "string", "description": "Contenu complet de l'article" },
+        "date": { "type": "string", "description": "Date de publication affichée" },
+        "category": { "type": "string", "description": "Catégorie de l'article" },
+        "image": { "type": "string", "description": "URL de l'image de couverture" },
+        "publishedAt": { "type": "string", "format": "date-time", "description": "Date de publication technique" }
+      },
+      "required": ["title", "excerpt", "content", "date", "category", "image", "publishedAt"]
+    }
+  },
+  "firestore": {
+    "/contacts/{contactId}": {
+      "schema": "Contact",
+      "description": "Collection des messages de contact"
+    },
+    "/downloads/{downloadId}": {
+      "schema": "Download",
+      "description": "Collection des téléchargements de témoignage"
+    },
+    "/news/{newsId}": {
+      "schema": "News",
+      "description": "Collection des articles d'actualités"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+@theme {
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Mulish", sans-serif;
+  
+  --color-primary: #0B1C2E; /* Logo blue */
+  --color-accent: #f27d26; /* Warm orange */
+  --color-paper: #f5f5f4;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-primary font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+}
+
+.markdown-body {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.markdown-body h2 {
+  @apply text-3xl mt-24 mb-12 text-primary font-serif border-b border-gray-100 pb-4;
+}
+
+.markdown-body p {
+  @apply mb-10 text-lg leading-relaxed;
+}
+
+.markdown-body blockquote {
+  @apply border-l-8 border-accent pl-10 my-16 italic bg-paper/30 py-10 rounded-r-[32px] shadow-sm;
+}
+
+.markdown-body blockquote p {
+  @apply mb-6 last:mb-0 text-xl text-primary/80;
+}
+
+.markdown-body strong {
+  @apply text-primary font-bold;
+}
