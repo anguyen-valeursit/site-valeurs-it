@@ -3,8 +3,9 @@ export const SITE_CONTENT = {
     name: "Valeurs IT",
     logo: "/logo-valeurs-it.png", // Logo Valeurs IT — servi depuis public/
     tagline: "Conseiller. Transformer. Innover.",
-    history: "Née de l’expérience unique des Jeux de Paris 2024, Valeurs IT accompagne les entreprises dans la transformation et la valorisation de leurs systèmes d’information. Notre conviction : la technologie n’a de sens que lorsqu’elle sert la vision, la performance collective et les valeurs humaines de l’organisation.",
-    mission: "VALEURS IT s’appuie sur une expérience de terrain acquise au plus haut niveau d’exigence, nourrie par les principes d’authenticité, de rigueur et de collaboration. Notre mission : créer les conditions pour qu’une DSI devienne un levier de valeur au service de l’entreprise.",
+    history: "Valeurs IT accompagne les organisations dans la définition et la mise en œuvre de leur stratégie SI. L’expérience acquise dans des contextes exigeants, notamment à Paris 2024, nourrit une approche multisectorielle : relier les choix technologiques aux enjeux métiers, à la performance collective et à la continuité d’activité.",
+    sectors: ["Sport", "Événementiel", "Services numériques", "Banque", "Distribution", "Télécommunications"],
+    mission: "Valeurs IT met une expérience de direction des systèmes d’information au service des organisations : définir un cap, structurer la gouvernance, sécuriser les opérations et faire progresser les équipes. La technologie devient un levier de valeur lorsqu’elle répond aux priorités de l’entreprise.",
     interventionPoints: [
       "Clarifier la stratégie numérique et aligner la technologie sur les enjeux métier.",
       "Accélérer la transformation IT et renforcer l’efficacité opérationnelle.",
@@ -13,8 +14,8 @@ export const SITE_CONTENT = {
   },
   bio: {
     name: "Alain Nguyen",
-    title: "Fondateur & Expert IT",
-    description: "Expert passionné par les enjeux de la transformation numérique, Alain Nguyen a fondé Valeurs IT pour apporter une vision humaine et stratégique à l'informatique d'entreprise. Fort d'une expérience solide dans le secteur, il accompagne ses clients avec une approche pragmatique et orientée résultats.",
+    title: "Fondateur · Direction des systèmes d’information",
+    description: "Fort de 25 ans d’expérience dans les systèmes d’information, Alain Nguyen a piloté des projets critiques, dirigé des fonctions SI et managé des équipes pluridisciplinaires. Son parcours chez DXC Technology (ex CSC), au Comité d’organisation des Jeux de Paris 2024 et au Groupe Luminess lui a permis d’exercer l’ensemble des responsabilités d’une direction SI : stratégie, budget, opérations, transformation, cybersécurité, partenaires et management. Il accompagne aujourd’hui les organisations avec une approche pragmatique, collective et orientée résultats.",
   },
   services: [
     {
@@ -29,7 +30,7 @@ export const SITE_CONTENT = {
     },
     {
       title: "Expertise IT",
-      description: "Audit, analyse des réponses à appel d'offres, accompagnement dans la mise en oeuvre de solutions technologiques",
+      description: "Audit du SI, gouvernance, gestion des risques et accompagnement de la cybersécurité et des transformations technologiques.",
       icon: "ShieldCheck"
     },
     {
@@ -44,176 +45,63 @@ export const SITE_CONTENT = {
     charter: "https://drive.google.com/file/d/1LLOfzW5wRMKHUagrfXTABpX1d5h9yzNe/view?usp=drive_link"
   },
   news: [
-    {
-      id: "paris-2024",
-      title: "Les Jeux de Paris 2024, une expérience unique",
-      excerpt: "Partage d'expérience sur la vision stratégique, l'authenticité, les liens, l'exigence et la résilience, illustrant des moments inoubliables et inspirants.",
-      date: "Octobre 2024",
-      category: "Expérience",
-      image: "/cover-paris-2024.jpg",
-      link: "https://www.linkedin.com/pulse/les-jeux-de-paris-2024-une-exp%C3%A9rience-unique-viet-hung-alain-nguyen-volze"
-    },
-    {
-      id: "souverainete-numerique",
-      title: "Souveraineté Numérique : Pourquoi il est temps d'agir",
-      excerpt: "Analyse de la dépendance technologique et de l'importance de l'autonomie stratégique, avec 5 pistes concrètes pour reprendre le contrôle de son écosystème numérique.",
-      date: "Janvier 2026",
-      category: "Stratégie",
-      image: "/cover-souverainete-numerique.jpg",
-      link: "https://www.linkedin.com/pulse/souverainet%C3%A9-num%C3%A9rique-pourquoi-il-est-temps-dagir-et-nguyen-qe5ce"
-    },
-    {
-      id: "it-preneur",
-      title: "Trajectoire ITPreneur : Le nouveau leadership numérique",
-      excerpt: "Membre actif de la communauté Atout DSI, Alain Nguyen explore la posture de l'ITPreneur : un leadership stratégique, fédérateur et entrepreneurial pour maximiser l'impact du numérique.",
-      date: "Mars 2026",
-      category: "Communauté",
-      image: "/cover-it-preneur.jpg",
-      link: "https://www.atout-dsi.com/ressources/trajectoire-itpreneur/"
-    },
-    {
-      id: "dsi-business-partner",
-      title: "DSI : Pourquoi le rôle de \"Business Partner\" est déjà mort (et ce qui va le remplacer)",
-      excerpt: "Pendant trop longtemps, le succès d’un DSI s’est mesuré à une seule métrique : « est-ce que les PC fonctionnent ? ». Mais dans une économie numérique, cette posture est devenue un anachronisme dangereux.",
-      date: "Avril 2026",
-      category: "Stratégie",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2070",
-      content: `
-# DSI : Pourquoi le rôle de "Business Partner" est déjà mort (et ce qui va le remplacer)
+    { id: "paris-2024", title: "Paris 2024 : une feuille de route technologique au service des opérations", excerpt: "Une feuille de route technologique au regard des enjeux opérationnels des grandes organisations sportives, construite avec les directions Revenu, Digital, Opérations, DAF et RH. Retour d’expérience sur la préparation et la résilience.", date: "Octobre 2024", category: "Sport & événementiel", image: "/cover-paris-2024.jpg", link: "https://www.linkedin.com/pulse/les-jeux-de-paris-2024-une-exp%C3%A9rience-unique-viet-hung-alain-nguyen-volze" },
+    { id: "souverainete-numerique", title: "Souveraineté numérique : maîtriser ses dépendances technologiques", excerpt: "Repères pour renforcer la résilience, comprendre les dépendances de son écosystème numérique et préserver sa capacité de décision.", date: "Janvier 2026", category: "Stratégie & cybersécurité", image: "/cover-souverainete-numerique.jpg", link: "https://www.linkedin.com/pulse/souverainet%C3%A9-num%C3%A9rique-pourquoi-il-est-temps-dagir-et-nguyen-qe5ce" },
+    { id: "it-preneur", title: "ITPreneur : un leadership numérique orienté valeur", excerpt: "Une réflexion issue de la communauté Atout DSI sur la posture du dirigeant IT : relier stratégie, initiative et création de valeur avec les métiers.", date: "Mars 2026", category: "Leadership", image: "/cover-it-preneur.jpg", link: "https://www.atout-dsi.com/ressources/trajectoire-itpreneur/" },
+    { id: "transformation-equipes", title: "Transformation IT : comment faire équipe quand tout change", excerpt: "Un retour d’expérience de Paris 2024, confronté à la réalité d’une direction IT en transformation, fait ressortir trois leviers : donner du sens, préparer l’action et construire la confiance.", category: "Leadership & transformation", image: "/cover-paris-2024.jpg", content: `
+J’ai encore parlé des Jeux. Mais cette fois, il ne s’agissait pas de parler des Jeux.
 
+Récemment, j’intervenais au séminaire d’une direction IT en pleine transformation. Deux équipes à réunir, une organisation à installer, de nouvelles méthodes à partager et, surtout, un collectif à construire autour d’une ambition commune.
 
-&nbsp;
+La question posée était simple : **comment faire équipe quand tout change, tout en continuant à délivrer ?** L’expérience de Paris 2024 m’a conduit à partager trois enseignements. Ils ne constituent pas une recette universelle ; ils donnent des repères à adapter à chaque organisation.
 
+## 1. Donner du sens : créer l’alignement autour d’une ambition commune
 
-## 1. Introduction : Le syndrome du "garant technique"
+En mars 2020, à Lausanne, nous avons écrit collectivement la raison d’être de notre DSI. Cette phrase nous a accompagnés pendant quatre ans, jusque dans nos recrutements.
 
-Pendant trop longtemps, le succès d’un DSI s’est mesuré à une seule métrique, presque humiliante : « est-ce que les PC fonctionnent ? ». Cantonné au rôle de gardien du temple technique, de la sécurité et de la conformité, le DSI était perçu comme un centre de coûts nécessaire, un prestataire interne sollicité au dernier moment pour "rendre possible" des décisions déjà actées ailleurs.
+Faire équipe ne signifie pas penser pareil. Les personnes n’ont pas besoin d’avoir les mêmes réflexes ou les mêmes opinions pour travailler ensemble. Elles doivent comprendre ce qu’elles cherchent à accomplir et comment leur contribution s’inscrit dans cet objectif.
 
-Mais dans une économie où l'entreprise est numérique, cette posture de retrait est devenue un anachronisme dangereux. Se contenter d'être un "partenaire" signifie rester à la remorque du business. La véritable question pour le décideur technologique d'aujourd'hui n'est plus la continuité de service, mais la légitimité stratégique : êtes-vous capable de reprendre votre souveraineté numérique et de provoquer des bascules au sein du COMEX ?
+## 2. Préparer l’action : faire de l’excellence opérationnelle une discipline collective
 
+Aux Jeux, la date ne pouvait pas être déplacée. Il fallait arbitrer et simplifier : distinguer l’obligatoire du nécessaire, de l’optionnel et de l’obsolète. Cette discipline aide les équipes à concentrer leurs efforts sur ce qui doit réellement fonctionner.
 
-&nbsp;
+Il fallait aussi répéter. Tester les systèmes et leurs intégrations, bien sûr, mais également les organisations et les décisions : qui décide, qui agit, qui prend le relais en cas d’imprévu ? L’excellence opérationnelle ne se décrète pas. Elle se prépare collectivement.
 
+## 3. Construire la confiance : donner aux équipes les moyens d’agir
 
-## 2. L’émergence de l'ITPreneur : Plus qu’un titre, une reconquête de souveraineté
+Nous avons fait évoluer la DSI d’une logique de guichet vers une posture de partenaire des métiers. Cela suppose de comprendre leurs enjeux, de questionner les besoins et de construire les solutions avec eux.
 
-Le concept d'ITPreneur marque une rupture brutale avec le passé. Fusion de l'Entrepreneur et de l'expert IT, il définit un leader qui ne se contente plus d'accompagner, mais qui active, défriche et oriente. Là où le Business Partner attend d'être sollicité pour traduire un besoin, l'ITPreneur agit comme un intrapreneur responsable de la création de valeur durable.
+La confiance se construit aussi en donnant aux équipes les moyens de décider au plus près du terrain. Former, responsabiliser et accepter le droit à l’erreur ne signifie pas renoncer à l’exigence : l’objectif reste partagé, et chacun peut contribuer à l’atteindre.
 
-> **Une posture de co-responsabilité**  
-> L'ITPreneur ne fournit pas de la technologie ; il livre de la performance économique.
->
-> &nbsp;
->
-> **Un leadership qui défriche**  
-> Il identifie les opportunités avant les métiers et prend des risques calculés pour donner un coup d'avance à l'organisation.
->
-> &nbsp;
->
-> **Un moteur d'agilité**  
-> Il n'est plus au service de la stratégie, il en est l'un des architectes fondamentaux.
+## Passer du témoignage à l’action
 
-La vision Atout DSI : « Hier, garant du bon fonctionnement et de l’évolution des moyens informatiques. Aujourd’hui, moteur d’innovation et d’agilité d’entreprise, créateur de valeur durable. »
+L’après-midi, huit groupes ont identifié les irritants entre l’IT et les métiers, partagé leurs difficultés et formulé des engagements concrets. Le retour d’expérience a pris de la valeur au moment où les participants ont pu le traduire dans leur propre contexte.
 
+Une transformation ne réussit pas seulement parce qu’une organisation est définie ou que des méthodes sont en place. Elle réussit lorsque les équipes comprennent où elles vont, se font confiance et savent agir ensemble.
 
-&nbsp;
+**Trois repères pour une transformation IT :** donner un cap que les équipes peuvent s’approprier ; répéter les décisions et les relais autant que les tests techniques ; associer les métiers et responsabiliser les équipes au plus près du terrain.
+      ` },
+    { id: "dsi-business-partner", title: "Le DSI, partenaire des métiers et acteur de la transformation", excerpt: "La continuité de service reste un socle. La contribution du DSI s’étend aussi à la stratégie, à l’évolution des processus et aux transformations qui mobilisent l’ensemble de l’entreprise.", date: "Avril 2026", category: "Stratégie", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2070", content: `
+## De la continuité à la contribution stratégique
 
+La disponibilité des services, la sécurité et la qualité du support restent des responsabilités centrales de la direction des systèmes d’information. Elles construisent la confiance nécessaire pour que les métiers puissent s’appuyer sur le numérique.
 
-## 3. La Lettre de Mission vs La Fiche de Poste : Négocier son mandat stratégique
+Mais le rôle du DSI ne s’arrête pas au bon fonctionnement des outils. Dans une organisation où les processus, les données et l’expérience client dépendent du numérique, la direction SI contribue aussi aux choix de transformation et à leur mise en œuvre.
 
-Pour s'extraire de l'exécution pure, l'ITPreneur doit troquer sa fiche de poste contre une Lettre de Mission. La différence est existentielle : la fiche de poste décrit ce que vous faites (obligations RH), tandis que la lettre de mission définit l'impact que vous développez pour la stratégie.
+## Travailler avec les métiers, dès la définition du besoin
 
-> **Protéger son périmètre**  
-> Sans lettre de mission, le DSI s'expose aux "injonctions paradoxales" et aux "missions implicites" qui fragmentent son action. Elle clarifie les zones grises et définit les engagements réciproques avec la DG.
->
-> &nbsp;
->
-> **Temporalité stratégique**  
-> Contrairement à la fiche de poste structurelle et figée, la lettre de mission est un outil de pilotage limité (12 à 24 mois), révisable selon les urgences business.
->
-> &nbsp;
->
-> **Les trois axes de pouvoir**  
-> Elle permet de structurer la réflexion, de formuler une ambition claire et d'influer directement sur les leviers de croissance.
+Être partenaire des métiers suppose d’en comprendre les objectifs, les contraintes opérationnelles et les indicateurs de réussite. Le DSI apporte une lecture des possibilités technologiques, des risques, des dépendances et des coûts complets. Les décisions se construisent avec les responsables métiers, qui restent propriétaires de leurs priorités et de leurs processus.
 
-**Conseil exécutif** : Ce mandat doit se négocier dès le processus d'embauche ou lors des 100 premiers jours via un "rapport d'étonnement". C'est l'unique fenêtre pour poser vos conditions de succès : accès à l'information stratégique, autonomie budgétaire (le droit d'expérimenter) et gouvernance directe.
+Cette coopération permet de formuler les besoins plus tôt, d’arbitrer les investissements et de concevoir des solutions adaptées aux usages. Elle évite de réduire la discussion à une demande d’outil ou à une réponse technique.
 
+## Faire converger stratégie et exécution
 
-&nbsp;
+Pour tenir cette place, la DSI doit associer feuille de route, gouvernance et qualité d’exécution. Elle clarifie les priorités, rend visibles les arbitrages, suit les résultats et ajuste les trajectoires lorsque le contexte évolue.
 
+La cybersécurité, la maîtrise des données, la résilience et l’accompagnement du changement traversent ces décisions. Elles doivent être intégrées dès la conception des projets, en lien avec les métiers et les fonctions concernées.
 
-## 4. Parler le "Business" pour activer son Soft Power
-
-Le paradoxe du DG est qu'il est souvent brillant mais émotionnellement influençable par le "dernier entré dans son bureau". Pour séduire une Direction Générale, il faut parfois cesser de prononcer le mot "IT" et investir le terrain de la psychologie et du marché.
-
-> **Le Soft Power par l'influence externe**  
-> Comme l'enseignant-chercheur qui n'existe que s'il publie, l'ITPreneur doit rayonner hors de l'entreprise. Votre reconnaissance dans des cercles externes ou la publication d'articles attire l'œil du DG et renforce votre crédit interne.
->
-> &nbsp;
->
-> **L'IA comme champ de bataille**  
-> Ne présentez pas l'IA comme un projet technique, mais comme un levier de productivité immédiat. Sans ITPreneur, l'IA devient un cauchemar de Shadow IT ; avec vous, elle devient un avantage concurrentiel tangible.
->
-> &nbsp;
->
-> **La stratégie "Océan Bleu"**  
-> Apportez des solutions à des problèmes non identifiés par les métiers. Anticiper une baisse démographique (éducation) ou un goulot d'étranglement logistique grâce à la data vous place instantanément au niveau du CEO.
-
-
-&nbsp;
-
-
-## 5. Le Paradoxe du DSI : Être "aussi complet qu'un CEO" sans capturer le pouvoir
-
-Le DSI moderne doit posséder une culture transverse totale : finance, RH, marketing. Marc-Henri Desportes souligne que pour structurer une roadmap, le DSI doit désormais raisonner exactement comme un Directeur Général.
-
-> **Mettre son ego entre parenthèses**  
-> La réussite de l'ITPreneur réside dans sa capacité à "faire parler les autres". Il doit amener les métiers à formuler leurs besoins sans jamais décider à leur place.
->
-> &nbsp;
->
-> **Clarifier les zones grises**  
-> Sa valeur ajoutée est d'apporter de la méthode et de la structure là où l'organisation est floue. En outillant un processus, il oblige l'entreprise à trancher ses incohérences.
->
-> &nbsp;
->
-> **Un leadership de service**  
-> Il doit être au cœur de tous les sujets stratégiques, mais accepter d'effacer sa propre autorité au profit de l'intelligence collective et de l'usage métier.
-
-« Le DSI doit être presque aussi complet qu'un CEO. » — Marc-Henri Desportes, CEO d’Omnès Education.
-
-
-&nbsp;
-
-
-## 6. La Force du Collectif : La légitimité par la "syndication"
-
-L'ITPreneur ne peut pas transformer l'organisation seul. Il doit apprendre à "se syndiquer" avec le CODIR pour bâtir une puissance collaborative qui rassure la Direction Générale.
-
-> **Bâtir des alliances transverses**  
-> Un DSI qui fait corps avec la Direction Marketing (sur l'expérience client) ou la DRH (sur la transformation des compétences) devient inattaquable.
->
-> &nbsp;
->
-> **Gérer les jeux politiques**  
-> La transparence totale est le socle de la confiance. Parler vrai sur les difficultés opérationnelles permet d'obtenir des arbitrages sereins et d'éviter la "chasse aux sorcières" en cas d'erreur.
->
-> &nbsp;
->
-> **Le CODIR comme bouclier**  
-> Une légitimité assise auprès de ses pairs est le signal le plus fort envoyé au DG. C'est la preuve que le numérique n'est plus un sujet technique, mais le ciment de l'organisation.
-
-
-&nbsp;
-
-
-## 7. Conclusion : Tracer sa trajectoire
-
-L'ITPreneur est l'architecte du changement, celui qui transforme la contrainte technologique en liberté stratégique. Il ne subit plus la trajectoire de l'entreprise, il aide à la dessiner en apportant de la méthode et de la clarté là où règne l'incertitude.
-
-**Appel à la réflexion** : Si vous examinez votre feuille de route pour les 18 prochains mois, quel switch majeur allez-vous provoquer pour impacter directement la performance économique de votre organisation ?
-
-La transformation commence par un choix : celui de ne plus être un simple fournisseur, mais un acteur à part entière de la stratégie. Quel sera votre premier pas, votre première alliance ou votre premier choix novateur ? Votre trajectoire d'ITPreneur commence aujourd'hui.
-      `
-    }
+Le DSI est ainsi à la fois garant d’un socle fiable et acteur des évolutions de l’entreprise. Sa contribution se mesure à sa capacité à rapprocher les enjeux métiers et technologiques, à faire travailler les équipes ensemble et à produire des résultats durables.
+      ` }
   ]
 };
+
