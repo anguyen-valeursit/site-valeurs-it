@@ -47,10 +47,10 @@ export default function ArticleView() {
                   <Tag className="w-3 h-3" />
                   {article.category}
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-400">
+                {article.date && <div className="flex items-center gap-2 text-sm text-gray-400">
                   <Calendar className="w-4 h-4" />
                   {article.date}
-                </div>
+                </div>}
                 <div className="flex items-center gap-2 text-sm text-gray-400">
                   <Clock className="w-4 h-4" />
                   {readingTime} min de lecture
@@ -122,3 +122,4 @@ export default function ArticleView() {
     </div>
   );
 }
+
