@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import History from "./components/History";
 import Bio from "./components/Bio";
 import Services from "./components/Services";
+import Experiences from "./components/Experiences";
 import News from "./components/News";
 import DownloadForm from "./components/DownloadForm";
 import ContactForm from "./components/ContactForm";
@@ -180,6 +181,7 @@ export default function App() {
               <History />
               <Bio />
               <Services />
+              <Experiences />
               <News />
               <DownloadForm />
               <ContactForm />
