@@ -61,7 +61,7 @@ interface NewsItem {
   id: string;
   title: string;
   excerpt: string;
-  date: string;
+  date?: string;
   category: string;
   image: string;
   link?: string;
@@ -83,7 +83,8 @@ export default function News() {
       })) as NewsItem[];
       
       // Merge with static news from constants
-      const allNews = [...SITE_CONTENT.news, ...firestoreNews];
+      // Static editorial versions take precedence for IDs also stored in Firestore.
+      const allNews = [...firestoreNews, ...SITE_CONTENT.news];
       // Remove duplicates if any (by id)
       const uniqueNews = Array.from(new Map(allNews.map(item => [item.id, item])).values());
       
@@ -147,12 +148,12 @@ export default function News() {
                 </div>
                 
                 <div className="p-8">
-                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                  {item.date && <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       {item.date}
                     </div>
-                  </div>
+                  </div>}
                   <h4 className="text-2xl font-serif font-bold mb-4 group-hover:text-accent transition-colors">
                     {item.title}
                   </h4>
@@ -192,3 +193,4 @@ export default function News() {
     </section>
   );
 }
+
