@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowLeft, Calendar, Tag, Share2, Clock } from "lucide-react";
@@ -9,6 +10,60 @@ import Footer from "./Footer";
 export default function ArticleView() {
   const { id } = useParams();
   const article = SITE_CONTENT.news.find(item => item.id === id);
+
+  useEffect(() => {
+    if (!article) return;
+    const canonicalUrl = `${window.location.origin}/actualites/${article.id}`;
+    const previousTitle = document.title;
+    document.title = `${article.title} | Valeurs IT`;
+
+    const restoreMeta: Array<() => void> = [];
+    const updateMeta = (selector: string, content: string) => {
+      const element = document.head.querySelector(selector);
+      if (!element) return;
+      const previous = element.getAttribute("content");
+      element.setAttribute("content", content);
+      restoreMeta.push(() => {
+        if (previous === null) element.removeAttribute("content");
+        else element.setAttribute("content", previous);
+      });
+    };
+
+    updateMeta('meta[name="description"]', article.excerpt);
+    updateMeta('meta[property="og:type"]', "article");
+    updateMeta('meta[property="og:title"]', article.title);
+    updateMeta('meta[property="og:description"]', article.excerpt);
+    updateMeta('meta[property="og:url"]', canonicalUrl);
+
+    const canonical = document.head.querySelector('link[rel="canonical"]');
+    const previousCanonical = canonical?.getAttribute("href") ?? null;
+    canonical?.setAttribute("href", canonicalUrl);
+
+    const schema = document.createElement("script");
+    schema.type = "application/ld+json";
+    schema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.title,
+      description: article.excerpt,
+      datePublished: article.id === "maitrise-dependances-01" ? "2026-11-10" : undefined,
+      author: { "@type": "Person", name: "Alain Nguyen" },
+      publisher: { "@type": "Organization", name: "Valeurs IT" },
+      mainEntityOfPage: canonicalUrl,
+      image: article.image.startsWith("http") ? article.image : `${window.location.origin}${article.image}`
+    });
+    document.head.appendChild(schema);
+
+    return () => {
+      document.title = previousTitle;
+      restoreMeta.forEach(restore => restore());
+      if (canonical) {
+        if (previousCanonical === null) canonical.removeAttribute("href");
+        else canonical.setAttribute("href", previousCanonical);
+      }
+      schema.remove();
+    };
+  }, [article]);
 
   if (!article) {
     return <Navigate to="/" replace />;
