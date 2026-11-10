@@ -46,7 +46,7 @@ export default function ArticleView() {
       "@type": "Article",
       headline: article.title,
       description: article.excerpt,
-      datePublished: article.id === "maitrise-dependances-01" ? "2026-11-10" : undefined,
+      datePublished: article.id === "maitrise-dependances-01" ? "2026-11-10" : article.id === "paris-2024" ? "2025-03-11" : article.id === "souverainete-numerique" ? "2025-11-17" : undefined,
       author: { "@type": "Person", name: "Alain Nguyen" },
       publisher: { "@type": "Organization", name: "Valeurs IT" },
       mainEntityOfPage: canonicalUrl,
